@@ -1,12 +1,7 @@
-const path = require('path');
-const express = require("express");
-const app = express();
+const server = require('./src/services/server');
 const port = process.env.PORT || 8080;
 
 
-//static files
-app.use(express.static(path.join(__dirname,'public')));
-//call the port
-app.listen(port, ()=>{
-    console.log(`Server Ready on ${port}`);
+server.listen(port, ()=>{
+    console.log('escuchando en el servidor ' + port);
 });

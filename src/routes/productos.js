@@ -11,7 +11,7 @@ rutaProductos.get('/', (req,res) =>{
  });
 
  rutaProductos.post('/', (req,res)=>{
-  contenedorNuevo.saveProduct(req);
+  contenedorNuevo.saveProducto(req);
   res.redirect('/');
 });
 
